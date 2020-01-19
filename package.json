@@ -1,6 +1,6 @@
 {
   "name": "homebridge-mi-airpurifier-ti",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "T XiaoMi air purifier plugins for HomeBridge(https://github.com/nfarina/homebridge).",
   "keywords": [
     "homebridge-plugin",

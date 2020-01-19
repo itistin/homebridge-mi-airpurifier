@@ -2,6 +2,7 @@ require('./Devices/MiAirPurifier2');
 require('./Devices/MiAirPurifier');
 require('./Devices/MiAirPurifierPro');
 require('./Devices/MiAirPurifier2S');
+require('./Devices/MiAirPurifier3');
 
 var fs = require('fs');
 var packageFile = require("./package.json");
@@ -98,6 +99,10 @@ MiAirPurifierPlatform.prototype = {
                     });
                 } else if (deviceCfg['type'] == "MiAirPurifier2S") {
                     new MiAirPurifier2S(this, deviceCfg).forEach(function(accessory, index, arr){
+                        myAccessories.push(accessory);
+                    });
+                } else if (deviceCfg['type'] == "MiAirPurifier3") {
+                    new MiAirPurifier3(this, deviceCfg).forEach(function(accessory, index, arr){
                         myAccessories.push(accessory);
                     });
                 } else {
